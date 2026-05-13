@@ -69,8 +69,12 @@ function DisplayBooks() {
             <h3>${book.title}</h3>
             <p>Author: ${book.author}</p>
             <p>Pages: ${book.pages}</p>
-            <button class="toggle-read-btn" onclick="toggleReadStatus('${book.id}')"> ${book.read ? 'Read' : 'Unread'}</button>
-            <button class="remove-book-btn" onclick="removeBookFromLibrary('${book.id}')">Remove</button>
+            <div class="toggle-read-container">
+                <button class="toggle-read-btn" onclick="toggleReadStatus('${book.id}')"> ${book.read ? 'Read' : 'Unread'}</button>
+            </div>
+            <div class="remove-book-container">
+                <svg class="remove-book-btn" onclick="removeBookFromLibrary('${book.id}')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+            </div>
         `;
         bookList.appendChild(bookCard);
     })

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+
+body {
+    font-family: "Cause", cursive;
+    padding: 0;
+    margin: 0;
+    color: #190933;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #190903;
+    color: #5dd9c1;
+    padding: 20px 30px;
+}
+
+#open-btn {
+    font-size: 18px;
+}
+
+form {
+    display: grid;
+    grid-template: auto / auto 1fr;
+}
+
+legend {
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+dialog {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    background-color: #5dd9c1;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding: 20px;
+    background-color: #665687;
+    flex: 1;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.book-card {
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #5dd9c1;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.book-card,
+button {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease;
+}
+
+.book-card:hover,
+button:hover {
+    transform: scale(1.05);
+}
+
+button {
+    font-family: "Cause", cursive;
+    background-color: #b084cc;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: fit-content;
+}
+
+input {
+    font-family: "Cause", cursive;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.toggle-read-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-book-btn {
+    background: none;
+    box-shadow: none;
+    width: 30px;
+}
+
+.remove-book-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    fill: #190933;
+}
