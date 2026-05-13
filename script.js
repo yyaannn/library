@@ -44,6 +44,14 @@ function addBookToLibrary(author, title, pages, read) {
     myLibrary.push(newBook);
 }
 
+function toggleReadStatus(bookId) {
+    const book = myLibrary.find(b => b.id === bookId);
+    if (book) {
+        book.read = !book.read;
+        DisplayBooks();
+    }
+}
+
 function removeBookFromLibrary(bookId) {
     myLibrary = myLibrary.filter(book => book.id !== bookId);
     DisplayBooks();
@@ -61,7 +69,7 @@ function DisplayBooks() {
             <h3>${book.title}</h3>
             <p>Author: ${book.author}</p>
             <p>Pages: ${book.pages}</p>
-            <p>Status: ${book.read ? 'Read' : 'Unread'}</p>
+            <button class="toggle-read-btn" onclick="toggleReadStatus('${book.id}')"> ${book.read ? 'Read' : 'Unread'}</button>
             <button class="remove-book-btn" onclick="removeBookFromLibrary('${book.id}')">Remove</button>
         `;
         bookList.appendChild(bookCard);
